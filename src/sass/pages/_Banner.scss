@@ -1,0 +1,62 @@
+// $myColorTest: yellowgreen;
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+.group {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 20px 20px 20px 20px;;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 3px solid rgb(13, 13, 12);
+
+  &__logo {
+  width: 50%;
+  height: auto;
+  display: flex;
+  border: 3px solid $myColorTest;
+
+  align-items: center;
+    img {
+      width : 40vw;
+      height : 8vh;
+    }
+    width: 50%;
+    height: auto;
+    display: flex;
+  }
+  &__navbar {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: 'Montserrat';
+    color: red;
+    font-size: 12px;
+    font-weight: 100;
+    text-transform: uppercase;
+    align-items: flex-end;
+    &__acueil {
+      margin-right: 40px;
+    }
+
+  }
+  // @media (max-width: 599px) {
+  // border: 3px solid red;
+  //  }
+
+@include sm {
+  border: 3px solid red;
+}
+@include md {
+  border: 3px solid rgb(0, 255, 38);
+}
+@include lg {
+  border: 3px solid rgb(64, 0, 255);
+}
+@include xl {
+  border: 3px solid rgb(217, 255, 0);
+}
+
+}

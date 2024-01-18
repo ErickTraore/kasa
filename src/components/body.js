@@ -1,15 +1,31 @@
+import React from "react";
+import small from '../assets/mAccueil-320.png';
+import medium from '../assets/mAccueil-425.png';
+import large from '../assets/mAccueil-768.png';
+import xlarge from '../assets/mAccueil-1240.png';
 import '../sass/mains.scss';
-// import logoAll from '../assets/logo/LOGO.png';
 
 function Body() {
-//     return( 
-//         // <div className="body">
-//         //         <img srcset="/static/media/mAccueil-320.21a1b8d46f3f2febf87d.png 320w, 
-//         //                     /static/media/mAccueil-425.a4be3504870aa9d4680b.png 425w, 
-//         //                     /static/media/mAccueil-768.130af8fa30a2259da8dd.png 768w, 
-//         //                     /static/media/mAccueil-1240.a38adeb5c62ae051df9e.png 1240w" src="/static/media/mAccueil-425.a4be3504870aa9d4680b.png" alt="" sizes="(max-width: 321px) 320px, (max-width: 426px) 425px, (max-width: 769px) 768px, 1240px" />
-//         // </div>
-//   )
+    return( 
+        <div className="body">
+             <div className="body__section">
+                
+                 <div className="body__section__masqgroup">
+                 <img  srcSet={`${small} 320w, 
+                               ${medium} 425w, 
+                               ${large} 768w, 
+                               ${xlarge} 1240w`
+                                }
+                    src={`${medium}`} alt=""
+                    sizes={`(max-width: 321px) 320px, (max-width: 426px) 425px, (max-width: 769px) 768px, (max-width: 1240px) 1241`} />
+                <div className="body__section__texte">
+                    <p>Chez vous, partout et ailleurs
+                    </p>
+                 </div> 
+             </div> 
+        </div>
+        </div>
+  )
 }
 
 export default Body;

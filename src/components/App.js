@@ -1,4 +1,5 @@
 import Banner from './Banner';
+import Setcard from './Setcard';
 import Body from './body';
 
 
@@ -8,6 +9,7 @@ function App() {
       <div className="App">
         <Banner />
         <Body />
+        <Setcard />
       </div>
     )
 }

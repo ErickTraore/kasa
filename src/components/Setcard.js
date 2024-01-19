@@ -1,13 +1,11 @@
 import React from "react";
-import docjson from "../../doc.json";
+import docjson from "../data/doc.json";
 import { Card } from 'react-bootstrap';
-import '../../style/BasicExample.scss';
-// import img1 from '../assets/Img.png';
 
 
 
 
-function BasicExample() {
+function Setcard() {
   return (
     <div className="img">
         {docjson.map((doc, index) => (
@@ -27,4 +25,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Setcard;

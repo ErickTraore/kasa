@@ -1,0 +1,58 @@
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+.img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 20px;
+    border: 3px solid rgb(13, 13, 12);
+    &__doc{
+        width: 100%;
+           height: auto;
+   &__lumn{
+           position: relative;
+           width: 100%;
+           height: auto;
+           justify-content: space-around;
+           margin: 6% 0%;
+           border-radius: 10px;
+           &__p2{
+               width: 100%;
+               height: auto;
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   right: 0;
+                   bottom: 0;
+                   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+                   color: #EEE;
+                   border-radius: 10px;                
+               &__title{
+                   width: 100%;
+                   height: auto;
+                       position: absolute;
+                       top: 30;
+                       left: 0;
+                       right: 0;
+                       bottom: 0;
+                       color: #EEE;
+                       padding: 5px;
+                   }
+           }
+   }
+}
+@include sm {
+    border: 3px solid red;
+  }
+  @include md {
+    border: 3px solid rgb(0, 255, 38);
+  }
+  @include lg {
+    border: 3px solid rgb(64, 0, 255);
+  }
+  @include xl {
+        border: 3px solid rgb(217, 255, 0);
+
+    }
+}

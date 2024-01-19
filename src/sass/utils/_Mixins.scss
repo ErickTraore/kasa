@@ -1,5 +1,16 @@
 // First devices
 
+@mixin sm2 {
+    @media (min-width: #{$screen-sm2-min}) {
+        @content;
+    }
+ }
+
+@mixin sm1 {
+    @media (min-width: #{$screen-sm1-min}) {
+        @content;
+    }
+ }
 
 @mixin sm {
     @media (min-width: #{$screen-sm-min}) {
@@ -20,10 +31,22 @@
         @content;
     }
  }
+
+ @mixin lg2 {
+    @media (min-width: #{$screen-lg2-min}) {
+        @content;
+    }
+ }
  
  // Extra large devices
  @mixin xl {
     @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+ @mixin xl1 {
+    @media (min-width: #{$screen-xl1-min}) {
         @content;
     }
  }

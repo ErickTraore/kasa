@@ -19,7 +19,7 @@
   align-items: center;
     img {
       width : 40vw;
-      height : 8vh;
+      height : 4vh;
     }
     width: 50%;
     height: auto;
@@ -89,6 +89,18 @@
 }
 @include md {
   border: 3px solid rgb(0, 255, 38);
+  &__logo {
+    width: 50%;
+    height: auto;
+    display: flex;
+    border: 3px solid $myColorTest;
+  
+    align-items: center;
+      img {
+        width : 25vw;
+        height : 8vh;
+      }
+    }
   &__navbar {
     width: 50%;
     text-transform: none;

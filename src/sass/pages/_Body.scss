@@ -4,7 +4,7 @@
     width: 100%;
     height: auto;
     display: flex;
-    padding: 20px 20px 20px 20px;
+    padding: 10px 10px 10px 10px;
     border: 3px solid rgb(13, 13, 12);
     &__section {
         width: 100%;
@@ -22,7 +22,7 @@
             line-height: 100%;
             position: absolute;
             left: 10%;
-            top: 18%;
+            top: 15%;
         }
         &__masqgroup {
             width: 100%;
@@ -35,7 +35,6 @@
             img {
             width: 100%;
             height: auto;
-       
         }
     }
     };
@@ -44,7 +43,7 @@
         &__section {
           &__texte p {
             width: 35%;
-            top: 20%;
+            top: 15%;
           }
         }
       }
@@ -55,7 +54,7 @@
             width: 42%;
 
             font-size: 20px;
-            top: 20%;
+            top: 15%;
           }
         }
       }
@@ -73,7 +72,7 @@
         &__section {
           &__texte p {
             width: 60%;
-            top: 22%;
+            top: 20%;
             font-size: 30px;
 
           }
@@ -94,8 +93,8 @@
         border: 3px solid rgb(64, 0, 255);
         &__section {
           &__texte p {
-            width: 60%;
-            top: 19%;
+            width: 52%;
+            top: 17%;
             font-size: 40px;
 
           }
@@ -114,7 +113,7 @@
         object-fit: cover;
     }
     &__texte p {
-        width: 41%;
+        width: 51%;
         height: auto;
         font-size: 60px;
         left: 20%;

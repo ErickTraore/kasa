@@ -1,62 +1,131 @@
 @import "/src/sass/utils/Variables";
 @import "/src/sass/utils/Mixins";
-.img {
+* {
+    margin: 0;
+    padding: 0;
+     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+.cardbody {
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    padding: 20px 20px 20px 20px;
-    border: 3px solid rgb(13, 13, 12);
-    &__doc{
-           width: 100%;
-           height: auto;
-   &__lumn{
-           position: relative;
-           height: auto;
-           justify-content: space-around;
-           margin: 6% 0%;
-           border-radius: 10px;
-           img {
+    border: solid black;
+    &__card{
+        width: 100%;
+        height: auto;
+        border: solid yellow;
+        padding: 10px 10px 10px 10px;
+        &__doc{
             width: 100%;
-            height: 40vw;
-           }
-           &__p2{
+            height: auto;
+       &__lumn{
+               position: relative;
                width: 100%;
                height: auto;
-                   position: absolute;
-                   top: 0;
-                   left: 0;
-                   right: 0;
-                   bottom: 0;
-                   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-                   color: #EEE;
-                   border-radius: 10px;                
-               &__title{
+               justify-content: space-around;
+               margin: 6% 0%;
+               border-radius: 10px;
+               img {
+                width: 100%;
+                height: 200px;
+            }
+               &__p2{
                    width: 100%;
                    height: auto;
                        position: absolute;
-                       top: 30;
+                       top: 0;
                        left: 0;
                        right: 0;
                        bottom: 0;
+                       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
                        color: #EEE;
-                       padding: 5px;
-                   }
-           }
+                       border-radius: 10px;                
+                   &__title{
+                       width: 100%;
+                       height: auto;
+                           position: absolute;
+                           top: 30;
+                           left: 0;
+                           right: 0;
+                           bottom: 0;
+                           color: #EEE;
+                           padding: 5px;
+                       }
+               }
+       }
    }
 }
+@include sm1 {
+}
+@include sm2 {
+}
 @include sm {
-    border: 3px solid red;
-  }
-  @include md {
-    border: 3px solid rgb(0, 255, 38);
-  }
-  @include lg {
-    border: 3px solid rgb(64, 0, 255);
-  }
-  @include xl {
-        border: 3px solid rgb(217, 255, 0);
-
-    }
+}
+@include md {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border: solid black;
+    justify-content: center;
+    margin: 0px auto;
+    &__card{
+        width: 96%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        border: solid red;
+        justify-content: space-between;
+        margin: 0px auto;
+        &__doc{
+            width: 48%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+       &__lumn{
+               flex-direction: row;
+               flex-wrap: wrap;
+               
+                }  
+            }
+        }
+}
+@include lg {
+}
+@include lg2 {
+}
+@include xl {
+    width: 100%;
+    height: auto;
+    display: flex;
+    border: solid black;
+    justify-content: center;
+    margin: 0px auto;
+    &__card{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        border: solid red;
+        justify-content: space-evenly;
+        margin: 0px auto;
+        &__doc{
+            width: 28%;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+       &__lumn{
+               flex-direction: row;
+               flex-wrap: wrap;
+               img {
+                width: 100%;
+                height: 300px;
+            }
+                }  
+            }
+        }
+}
+@include xl1 {
+}
 }

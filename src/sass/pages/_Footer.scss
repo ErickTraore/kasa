@@ -1,0 +1,34 @@
+.footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+   
+    &__logo {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+        img{
+            width: 20%;
+            height: auto;
+            display: flex;
+            margin-top: 30px;
+        }
+    }
+    &__coppright{
+          width: 100%;
+          height: auto;  
+          display: flex;
+          justify-content: center;
+          margin: 0px auto;
+          img{
+            width: 50%;
+            height: auto;
+            display: flex;
+            margin-bottom: 20px;
+        }
+    }
+}

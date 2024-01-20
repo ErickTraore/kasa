@@ -1,6 +1,7 @@
 import Banner from './Banner';
 import Setcard from './Setcard';
 import Body from './body';
+import Footer from './Footer';
 
 
 
@@ -10,6 +11,7 @@ function App() {
         <Banner />
         <Body />
         <Setcard />
+        <Footer />
       </div>
     )
 }

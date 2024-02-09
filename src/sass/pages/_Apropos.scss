@@ -1,0 +1,17 @@
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+.propos {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &__accordeon {
+        width: 100%;
+        height: auto;
+        display: flex; 
+    }
+}
+// .active{
+//     border: solid 3px blue;
+
+// }

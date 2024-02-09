@@ -4,7 +4,7 @@ import Layout from "../src/Pages/Layout";
 import Setcard from "../src/Pages/Setcard";
 import NoPage from "../src/Pages/NoPage";
 import Apropos from "../src/Pages/Apropos";
-
+import Appartement from "./Pages/Appartement";
 export default function App() {
   return (
     <BrowserRouter>
@@ -12,6 +12,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Setcard />} />
           <Route path="/Apropos" element={<Apropos />} />
+          <Route path="/Appartement/:id" element={<Appartement/>} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

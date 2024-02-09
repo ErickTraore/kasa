@@ -1,9 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import logoAll from '../assets/logo/LOGO.png';
 import '../sass/mains.scss';
-import Body from './body';
-
-
 const Layout = () => {
   return (
     <>
@@ -21,9 +18,7 @@ const Layout = () => {
                     </div>
             </div>
         </div>
-      <div className="group">
-        <Body />
-      </div>
+   
 
       <Outlet />
     </>

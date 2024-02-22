@@ -4,9 +4,7 @@ import { useParams} from "react-router-dom";
 import { Card } from 'react-bootstrap';
 import arrowL from '../assets/icons/arroLeft.png';
 import arrowR from '../assets/icons/arrowRigth.png';
-import myStarc from '../assets/icons/vectorStarc.png';
-import myStarn from '../assets/icons/vectorStarn.png';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Accordeon from "./Accordeon";
 import Rating from "./Rating";
 
@@ -17,58 +15,46 @@ function getIndex(id) {
  
 const Appartement = () => {
     const params = useParams()
-    const id = params.id
-    const myId = getIndex(id);
-    const [count, setCount] = useState(myId);
+    const id = params.id        // réference de l'image
+    const myId = getIndex(id);  // l'identifiant de l'imame
+    // const [count, setCount] = useState(myId);
+    const count =  myId;
     let dataItem = docjson[count]
+    console.log(id);
+    console.log(myId);
+    console.log(dataItem);
+    console.log(dataItem.pictures);
+    let totalPictures = dataItem.pictures.length; //qté d'img à visualiser.
+    console.log(totalPictures);
+    const [countPict, setCountPict] = useState(0);
+    console.log(countPict);
 
  // affichage  séquentielle des images ascendante ou descendante 
   const handleClickRigth = (e) => {
     e.preventDefault();
-    if(count >= 19){
-        setCount(count => count - 19)
+    if(countPict >= (totalPictures - 1)){
+        setCountPict(countPict => countPict - (totalPictures - 1))
     }
     else{ 
-        setCount(count => count + 1)
+        setCountPict(countPict => countPict + 1)
     }
   }
   const handleClickLeft = (e) => {
     e.preventDefault()
-    if(count <= 0){
-        setCount(count => count + 19)
+    if(countPict <= 0){
+        setCountPict(countPict => countPict + (totalPictures - 1))
     }
     else{ 
-        setCount(count => count - 1)
+        setCountPict(countPict => countPict - 1)
     }
   }
-
-//   useEffect(() => {
-//       const rates = document.getElementsByClassName('appartement__describe__text__rowRigth__rate__star__image')
-//       const myRate = dataItem.rating;
-//       console.log(myRate)
-//       for (let i = 0; i < rates.length; i++) {
-//         console.log(rates[i]);
-//       };
-//   })
-
-  // affichage des scores attribuées par les clients
- 
-
-// console.log(myId)
-// console.log(count)
-// console.log(docjson[count])
-// console.log(dataItem)
-// console.log(card.id)
-// console.log(dataItem.id)
-
 return (
         (   
     <div>
-       
                 <div className="appartement">
                     <div className="appartement__card">
                         <Card className="appartement__card__img">
-                                <Card.Img src={dataItem.cover} />
+                                <Card.Img src={dataItem.pictures[countPict]} />
                         </Card>
                         <div className="appartement__icon">
                                 <button className="appartement__icon__left" onClick={handleClickLeft}> 
@@ -77,7 +63,13 @@ return (
                                 <button className="appartement__icon__rigth" onClick={handleClickRigth}> 
                                     <img src={arrowR} alt="Trees" height="200" />
                                 </button> 
-                        </div> 
+                        </div>
+                        <div className="appartement__totalPictures">
+                            <div className="appartement__totalPictures__nbre">
+                              {countPict + 1} / {totalPictures}
+                            </div>
+                        </div>
+
                     </div>
                     <div className="appartement__describe">
                         <div className="appartement__describe__text">
@@ -127,19 +119,15 @@ return (
                             </div>
                         </div>
                         <div className="appartement__describe__collapse">
-                            <div>
                                 <Accordeon 
                                 title = "Description"
                                 content = {dataItem.description}
                                 />
-                            </div>
-                         
-                            <div>
+                          
                                 <Accordeon 
                                 title = "Equipements"
                                 content = {dataItem.description}
                                 />
-                            </div>
                         </div>
                 </div>
             </div>

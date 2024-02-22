@@ -1,47 +1,58 @@
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+
 .accordeon {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
-    &__banner{
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__banner {
         width: 100%;
         height: auto;
         display: flex;
-        background-color:#FF6060;
-        border-radius: 8px;
-        justify-content: space-between;
-        margin: 20px 0px 0px 0px;
+        background-color: #FF6060;
+        margin: 12px auto;
         padding: 5px 0px 5px 5px;
+
         &__title {
             width: 90%;
             height: auto;
             display: flex;
+            color: white;
         }
+
         &__icon {
             width: 10%;
             height: auto;
             display: flex;
             overflow-x: hidden;
             cursor: pointer;
-            .active{
+
+            .active {
                 transform: rotate(180deg);
-        }
+            }
+
             img {
                 width: 60%;
                 height: auto;
                 display: flex;
                 object-fit: cover;
                 object-position: bottom right;
-           
-              
             }
-          
-            }
-      
         }
+    }
+
     &__content {
         width: 100%;
         height: auto;
-        border: 3px solid black;
+        font-size: 12px;
     }
+    @include md {
+        width: 40%;
+        height: auto;
+        display: flex;
+    }
+
 }

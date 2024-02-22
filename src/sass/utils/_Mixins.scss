@@ -1,10 +1,10 @@
 // First devices
-
-@mixin sm2 {
-    @media (min-width: #{$screen-sm2-min}) {
-        @content;
-    }
- }
+// @mixin sm {
+//     @media (min-width: #{$screen-sm-min}) {
+//         @content;
+//     }
+//  }
+ 
 
 @mixin sm1 {
     @media (min-width: #{$screen-sm1-min}) {
@@ -12,12 +12,12 @@
     }
  }
 
-@mixin sm {
-    @media (min-width: #{$screen-sm-min}) {
+ @mixin sm2 {
+    @media (min-width: #{$screen-sm2-min}) {
         @content;
     }
  }
- 
+
  // Medium devices
  @mixin md {
     @media (min-width: #{$screen-md-min}) {
@@ -26,11 +26,7 @@
  }
  
  // Large devices
- @mixin lg {
-    @media (min-width: #{$screen-lg-min}) {
-        @content;
-    }
- }
+
 
  @mixin lg2 {
     @media (min-width: #{$screen-lg2-min}) {

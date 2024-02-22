@@ -1,34 +1,47 @@
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+
 .footer {
     width: 100%;
-    height: auto;
+    height: 20vh;
+    color: white;
     display: flex;
-    background-color: black;
+    justify-content: center;
     flex-direction: column;
-   
-    &__logo {
-        width: 100%;
+        background-color: black;
+
+    &__content{
+        width: auto;
+        height: auto;
+        color: white;
+        display: flex;
+        margin: 0px auto;
+        justify-content: center;
+        img {
+            width: 12vh;
+            height: auto;
+        }
+    }
+
+    &__coppryght{
+        width: 22%;
         height: auto;
         display: flex;
-        justify-content: center;
+        flex-wrap: wrap;
         margin: 0px auto;
-        img{
-            width: 20%;
+        justify-content: center;
+        background-color: black;
+   
+        &__text{
+            width: auto;
             height: auto;
             display: flex;
-            margin-top: 30px;
+            color: rgb(134, 130, 130);
+            p {
+                width: auto;
+                height: auto;
+                font-size: 9px;
+            }
         }
     }
-    &__coppright{
-          width: 100%;
-          height: auto;  
-          display: flex;
-          justify-content: center;
-          margin: 0px auto;
-          img{
-            width: 50%;
-            height: auto;
-            display: flex;
-            margin-bottom: 20px;
-        }
     }
-}

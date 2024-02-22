@@ -1,60 +1,74 @@
 @import "/src/sass/utils/Variables";
 @import "/src/sass/utils/Mixins";
+
 * {
     margin: 0;
     padding: 0;
-     -webkit-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
-  .card-img {
+}
+
+.card-img {
     width: 6vh;
     height: 6vh;
     border-radius: 50%;
     display: flex;
-} 
+}
+
 .appartement {
     width: 100%;
-    height: 100%;
-    border: solid black;
+    height: auto;
     display: flex;
     flex-direction: column;
-    &__card{
+
+    &__card {
         position: relative;
-        width: 100%;
+        width: auto;
         height: auto;
-        border: solid yellow;
+
+        // height: 34vh;
+        display: flex;
         padding: 10px 10px 10px 10px;
-        img {
+        &__img {
+            width: 52vh;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                object-fit: cover;
+                border-radius: 10px 10px 10px 10px;
+            }
+    }
+
+        &__p2 {
             width: 100%;
             height: auto;
-            border-radius: 10px 10px 10px 10px;                
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+            color: #EEE;
+            border-radius: 10px 10px 10px 10px;
+
+            &__title {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 30;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: #EEE;
+                padding: 5px;
             }
-               &__p2{
-                   width: 100%;
-                   height: auto;
-                       position: absolute;
-                       top: 0;
-                       left: 0;
-                       right: 0;
-                       bottom: 0;
-                       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-                       color: #EEE;
-                       border-radius: 10px 10px 10px 10px;                
-                   &__title{
-                       width: 100%;
-                       height: auto;
-                           position: absolute;
-                           top: 30;
-                           left: 0;
-                           right: 0;
-                           bottom: 0;
-                           color: #EEE;
-                           padding: 5px;
-                       }
-               }
-       }
-       &__icon{
+        }
+    }
+
+    &__icon {
         position: absolute;
         top: 40%;
         left: 0%;
@@ -62,111 +76,142 @@
         height: auto;
         display: flex;
         padding: 10px 10px 10px 10px;
+
         // background-color: transparent;
-        &__left{
+        &__left {
             width: 100%;
             height: auto;
             display: flex;
             justify-content: flex-start;
             background-color: transparent;
             border: none;
-            img{
+
+            img {
                 width: 20%;
                 height: auto;
             }
         }
-        &__rigth{
+
+        &__rigth {
             width: 100%;
             height: auto;
             display: flex;
             justify-content: flex-end;
             background-color: transparent;
             border: none;
-            img{
+
+            img {
                 width: 20%;
-                height: auto;               
-            }          
+                height: auto;
+            }
         }
-    
-  
+
+
     }
-    &__describe{
+
+    &__totalPictures {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 78%;
+        left: 0%;
+        display: flex;
+        justify-content: center;
+        padding: 10px 10px 10px 10px;
+
+        &__nbre {
+            width: 7vh;
+            height: auto;
+            display: flex;
+            text-align: center;
+            font-size: 10px;
+            color: white;
+        }
+    }
+
+    &__describe {
         width: 100%;
         height: auto;
         display: flex;
-        border: solid 3px red;
         padding: 10px 10px 10px 10px;
         flex-direction: column;
-        &__text{
+
+        &__text {
             width: 100%;
             height: auto;
             display: flex;
-            // border: solid 3px green;
             flex-direction: column;
-            &__rowLeft{
+
+            &__rowLeft {
                 width: 100%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
-                background-color: bisque;
-                border: solid 3px rgb(0, 11, 128);
-                &__title{
+
+                &__title {
                     width: 100%;
-                    height: 73px;
+                    height: 53px;
                     display: flex;
+                    color: #FF6060;
                     flex-direction: column;
-                    &__content{
+
+                    &__content {
                         width: 100%;
                         height: 70%;
                         display: flex;
-                        border: solid 3px rgb(95, 80, 58);
                     }
-                    &__location{
+
+                    &__location {
                         width: 100%;
                         height: 30%;
                         display: flex;
-                        border: solid 3px rgb(220, 161, 72);
 
                     }
                 }
-                &__tags{
+
+                &__tags {
                     width: 100%;
                     height: auto;
                     display: flex;
                     flex-direction: row;
-                    &__vectors{
+
+                    &__vectors {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: row;
+
+                        &__items {
                             width: 100%;
                             height: auto;
                             display: flex;
+                            flex-wrap: nowrap;
                             flex-direction: row;
-                            &__items{
-                                width: 100%;
+                            justify-content: flex-start;
+
+                            &__item {
+                                width: auto;
                                 height: auto;
                                 display: flex;
                                 flex-wrap: nowrap;
-                                flex-direction: row;
-                                justify-content: flex-start;
-                                &__item{
-                                    width: auto;
-                                    height: auto;
-                                    display: flex;
-                                    flex-wrap: nowrap;
-                                    font-size: 12px;
-                                    padding: 2px 20px 2px 20px;
-                                    margin: 10px 0px 10px 0px;
-                                    border-radius: 5px;
-                                    background-color:#FF6060;
-                                }
-    
+                                font-size: 12px;
+                                padding: 2px 20px 2px 20px;
+                                margin: 10px 0px 10px 0px;
+                                border-radius: 5px;
+                                color: white;
+                                background-color: #FF6060;
                             }
+
                         }
+                    }
                 }
             }
-            &__rowRigth{
+
+            &__rowRigth {
                 width: 100%;
                 height: 5%;
                 display: flex;
-                flex-direction:row-reverse;
+                flex-direction: row-reverse;
 
                 &__rate {
                     width: 50%;
@@ -175,6 +220,7 @@
                     justify-content: space-between;
                     margin: auto auto;
                     align-items: baseline;
+
                     &__star {
                         width: 100%;
                         height: auto;
@@ -185,68 +231,73 @@
                             height: auto;
                             background-color: #FF6060;
                             display: flex;
-                        text-align: left;
+                            text-align: left;
 
                         }
                     }
                 }
-                &__host{
+
+                &__host {
                     width: 50%;
                     height: 10vh;
                     display: flex;
                     justify-content: center;
-                    &__identity{
+
+                    &__identity {
                         width: 60vh;
                         height: 9vh;
                         display: flex;
                         flex-direction: row;
                         justify-content: flex-end;
                         margin: auto 0px;
-                        &__name{
+
+                        &__name {
                             width: 50%;
                             height: auto;
                             display: flex;
                             align-items: center;
                             justify-content: flex-end;
+
                             div {
                                 width: 80%;
-                                height: auto;
-                                display: flex; 
-                                color: #FF6060;
-                                text-align: right;
-                                margin : 0px;
+                             height: auto;
+                             display: flex;
+                             color: #FF6060;
+                             text-align: right;
+                             margin: 0px;
+                         }
+                        }
 
-                            }
-                            }
-                        &__circle{
+                        &__circle {
                             width: 30%;
                             height: 7vh;
                             display: flex;
                             justify-content: center;
                             margin: auto 0px;
-                            
+
                         }
                     }
                 }
-           
 
             }
 
 
         }
-        &__collapse{
+
+        &__collapse {
             width: 100%;
             height: auto;
             display: flex;
-            border: solid 3px green;
             flex-direction: column;
-            &__describe{
+
+            &__describe {
                 width: 100%;
                 height: auto;
                 display: flex;
                 border: solid 3px green;
             }
-            &__equipement{
+
+            &__equipement {
                 width: 100%;
                 height: auto;
                 display: flex;
@@ -256,75 +307,85 @@
     }
 
 
-@include sm1 {
-}
-@include sm2 {
-}
-@include sm {
-}
-@include md {
-    width: 100%;
-    height: auto;
-    display: flex;
-    border: solid black;
-    justify-content: center;
-    margin: 0px auto;
-    &__card{
-        width: 96%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        border: solid red;
-        justify-content: space-between;
-        margin: 0px auto;
-        &__doc{
-            width: 48%;
+    @include sm1 {
+        .appartement__card {
+            width: 100%;
             height: auto;
-            display: flex;
-            flex-wrap: wrap;
-       &__lumn{
-               flex-direction: row;
-               flex-wrap: wrap;
-               
-                }  
-            }
-        }
-}
-@include lg {
-}
-@include lg2 {
-}
-@include xl {
-    width: 100%;
-    height: auto;
-    display: flex;
-    border: solid black;
-    justify-content: center;
-    margin: 0px auto;
-    &__card{
-        width: 90%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        border: solid red;
-        justify-content: space-evenly;
-        margin: 0px auto;
-        &__doc{
-            width: 28%;
-            height: auto;
-            display: flex;
-            flex-wrap: wrap;
-       &__lumn{
-               flex-direction: row;
-               flex-wrap: wrap;
-               img {
+            &__img{
                 width: 100%;
-                height: 300px;
-            }
-                }  
+                height: auto;
             }
         }
+     
+    }
+
+    @include sm2 {
+        .appartement__card {
+            width: 100%;
+            height:auto;
+            &__img{
+                width: 100%;
+                height: auto;
+                // height: 38vh;  
+            }
+        }
+    }
+
+    @include md {
+        // .appartement__describe__collapse {
+          
+        //   }
+        &__card {
+            width: 100%;
+            height:auto;
+            &__img {
+            width: 100%;
+            height:auto;
+            }
+        }
+        &__describe {
+            &__text{
+                &__rowLeft {
+                    &__title {
+                        &__content {
+                    width: 100%;
+                    height: 70%;
+                    display: flex;
+                    font-size: 22px;
+                    }
+                }
+             }
+            
+            }
+            &__collapse {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-between
+             }
+        }   
 }
-@include xl1 {
-}
+
+    @include lg2 {
+        .appartement__card {
+            width: 100%;
+            height:auto;
+        }
+    }
+
+    @include xl {
+        .appartement__card {
+            width: 100%;
+            height:auto;
+            
+        }
+    }
+
+    @include xl1 {
+        .appartement__card {
+            width: 100%;
+            height:auto;
+        }
+    }
 }

@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import arrowUp from '../assets/icons/arroUp.png';
 
-
 const Accordeon = (props) => {
 const[active, setActive] = useState(false)
 const handleToggle = (e) =>{
@@ -11,8 +10,7 @@ const handleToggle = (e) =>{
     const element = e.target
     element.classList.toggle("active");
 }
-
-    return (
+   return (
         <div className="accordeon">
             <div className="accordeon__banner" >
                 <div className="accordeon__banner__title"  >

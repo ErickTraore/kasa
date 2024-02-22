@@ -20,6 +20,5 @@ const Rating = (props) => {
             {listRates}
         </div>
     )
-
 }
     export default Rating;

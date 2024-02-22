@@ -1,0 +1,64 @@
+  .active {
+    border-bottom: solid 1px #FF6060;
+  }
+  .layout__navbar {
+    width: 100%;
+    height: auto;
+    justify-content:flex-end;
+    display: flex;
+    color: #FF6060;
+  
+    &__one {
+      width: 44%;
+      height: auto;
+      display: flex;
+      a {
+        color: #FF6060;
+      }
+      @include sm1 {}
+  
+      @include sm2 {
+        margin: 0px 30px 0px 2px;
+      }
+  
+  
+      @include md {}
+  
+  
+      @include lg2 {}
+  
+      @include xl {}
+  
+      @include xl1 {
+        margin: 0px 82px 0px 5px;
+  
+      }
+    }
+  
+    &__two {
+      width: 44%;
+      height: auto;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        color: #FF6060;
+      }
+  
+      text-align: end;  
+      @include sm1 {}
+  
+      @include sm2 {
+        margin: 0px 2px 0px 2px;
+      }
+  
+  
+      @include md {}
+  
+  
+      @include lg2 {}
+  
+      @include xl {}
+  
+      @include xl1 {}
+    }
+  }

@@ -22,25 +22,25 @@ const Apropos = () => {
 
         <div className='propos__accordeon'>
           <Accordeon 
-          title="titre 1" 
+          title="Fiabilité" 
           content="contenu 1" 
           />
         </div>
         <div className='propos__accordeon'>
           <Accordeon 
-          title="titre 2" 
+          title="Respect" 
           content="contenu 2" 
           />
         </div>
         <div className='propos__accordeon' >
           <Accordeon 
-          title="titre 3" 
+          title="Service" 
           content="contenu 3" 
           />
         </div>
         <div className='propos__accordeon'>
           <Accordeon 
-          title="titre 4" 
+          title="Sécurité" 
           content="contenu 4" 
           />  
         </div>

@@ -47,6 +47,8 @@ const Appartement = () => {
     else{ 
         setCountPict(countPict => countPict - 1)
     }
+    const equip = dataItem.equipments
+
   }
 return (
         (   
@@ -119,15 +121,19 @@ return (
                             </div>
                         </div>
                         <div className="appartement__describe__collapse">
+                            <div>
                                 <Accordeon 
                                 title = "Description"
                                 content = {dataItem.description}
                                 />
-                          
+                            </div>
+                         
+                            <div>
                                 <Accordeon 
                                 title = "Equipements"
-                                content = {dataItem.description}
+                                content = {dataItem.equipments}
                                 />
+                            </div>
                         </div>
                 </div>
             </div>

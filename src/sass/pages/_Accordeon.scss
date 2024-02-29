@@ -1,61 +1,125 @@
 @import "/src/sass/utils/Variables";
 @import "/src/sass/utils/Mixins";
 
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+ul {
+    list-style: none;
+  }
 .accordeon {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    &__banner {
+    &__div {
         width: 100%;
         height: auto;
         display: flex;
+        margin: 10px 0px 0px 0px;
         background-color: #FF6060;
-        margin: 12px auto;
-        padding: 5px 0px 5px 5px;
-
-        &__title {
-            width: 90%;
+        border-radius: 5px;
+        &__banner {
+            width: 100%;
             height: auto;
             display: flex;
-            color: white;
-            align-items: center;
-        }
-
-        &__icon {
-            width: 10%;
-            height: auto;
-            display: flex;
-            overflow-x: hidden;
-            cursor: pointer;
-
-            .active {
-                transform: rotate(180deg);
-            }
-
-            img {
-                width: 60%;
+            border-radius: 5px;
+            margin: 6px auto;
+            &__title {
+                width: 87%;
                 height: auto;
                 display: flex;
-                object-fit: cover;
-                object-position: bottom right;
+                color: white;
+                align-items: center;
+                font-size: 13px;
+                margin-left: 6px;
+            }
+
+            &__icon {
+                    width: 10%;
+                    height: auto;
+                    display: flex;
+                    overflow-x: hidden;
+                    cursor: pointer;
+                    .active {
+                        transform: rotate(180deg);
+                    }
+
+                    img {
+                        width: 75%;
+                        height: auto;
+                        display: flex;
+                        object-fit: cover;
+                        object-position: bottom right;
+                    }
+            }
             }
         }
-    }
 
-    &__content {
+            &__content {
+                animation: fadein 2s;
+                width: 100%;
+                height: 70%;
+                display: flex;
+                font-size: 12px;
+                margin: 0px 0px 20px 0px;
+                padding:  0px 0px 0px 10px;
+                background-color: #f6f6f6;
+                // transform: translateY(-15px);
+                // transition: all .4s ease-in-out;
+
+                &__text {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    margin: 0px 0px 20px 0px;
+
+
+
+                &__ul {
+                    width: 100%;
+                    height: auto;
+                    padding: 30px 30px;
+
+                    li{
+                        width: 100%;
+                        height: auto;
+
+
+
+                    }
+                }
+            }
+        }
+    @include md {
+        width: 95%;
+        height: auto;
+        display: block;
+        margin: 12px auto;
+        padding: 5px 0px 5px 0px;
+    }
+    @include lg2 {
         width: 100%;
         height: auto;
-        font-size: 12px;
+        display: block;
+        &__div{
+            width: 100%;
+            height: auto;
+            display: block;
+            &__banner {
+            width: 100%;
+            height: auto;
+            display: flex;
+            background-color: #FF6060;
+        }    
     }
-    @include md {
-        width: 80%;
-        height: auto;
-        display: flex;
-        margin: 12px auto;
-        padding: 5px 0px 5px 5px;
-    }
+   
+}
 
 }

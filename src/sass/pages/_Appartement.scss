@@ -26,12 +26,11 @@
         position: relative;
         width: auto;
         height: auto;
-
-        // height: 34vh;
+        justify-content: center;
         display: flex;
         padding: 10px 10px 10px 10px;
         &__img {
-            width: 52vh;
+            width: 63vh;
             height: auto;
             img {
                 width: 100%;
@@ -40,7 +39,7 @@
                 object-fit: cover;
                 border-radius: 10px 10px 10px 10px;
             }
-    }
+         }
 
         &__p2 {
             width: 100%;
@@ -67,7 +66,7 @@
             }
         }
     }
-
+    
     &__icon {
         position: absolute;
         top: 40%;
@@ -294,14 +293,12 @@
                 width: 100%;
                 height: auto;
                 display: flex;
-                border: solid 3px green;
             }
 
             &__equipement {
                 width: 100%;
                 height: auto;
                 display: flex;
-                border: solid 3px green;
             }
         }
     }
@@ -326,7 +323,6 @@
             &__img{
                 width: 100%;
                 height: auto;
-                // height: 38vh;  
             }
         }
     }
@@ -336,7 +332,7 @@
           
         //   }
         &__card {
-            width: 100%;
+            width: 20%;
             height:auto;
             &__img {
             width: 100%;
@@ -363,17 +359,324 @@
                 display: flex;
                 flex-direction: row;
                 justify-content:space-between
-             }
+               
+             &__describe {
+                width: 100%;
+                height: auto;
+                display: flex;
+            }
+
+            &__equipement {
+                width: 100%;
+                height: auto;
+                display: flex;
+            }
+        }
         }   
-}
 
     @include lg2 {
-        .appartement__card {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    
+        &__card {
+            position: relative;
+            width: auto;
+            height: auto;
+            justify-content: center;
+            display: flex;
+            padding: 10px 10px 10px 10px;
+            &__img {
+                width: 63vh;
+                height: auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    object-fit: cover;
+                    border-radius: 10px 10px 10px 10px;
+                }
+             }
+    
+            &__p2 {
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+                color: #EEE;
+                border-radius: 10px 10px 10px 10px;
+    
+                &__title {
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 30;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: #EEE;
+                    padding: 5px;
+                }
+            }
+        }
+        
+        &__icon {
+            position: absolute;
+            top: 40%;
+            left: 0%;
             width: 100%;
-            height:auto;
+            height: auto;
+            display: flex;
+            padding: 10px 10px 10px 10px;
+    
+            // background-color: transparent;
+            &__left {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-start;
+                background-color: transparent;
+                border: none;
+    
+                img {
+                    width: 20%;
+                    height: auto;
+                }
+            }
+    
+            &__rigth {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                background-color: transparent;
+                border: none;
+    
+                img {
+                    width: 20%;
+                    height: auto;
+                }
+            }
+    
+    
+        }
+    
+        &__totalPictures {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            top: 78%;
+            left: 0%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 10px 10px 10px;
+    
+            &__nbre {
+                width: 7vh;
+                height: auto;
+                display: flex;
+                text-align: center;
+                font-size: 10px;
+                color: white;
+            }
+        }
+    
+        &__describe {
+            width: 100%;
+            height: auto;
+            display: flex;
+            padding: 10px 10px 10px 10px;
+            flex-direction: row;
+            flex-wrap: wrap;
+    
+            &__text {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+    
+                &__rowLeft {
+                    width: 75%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+    
+                    &__title {
+                        width: 100%;
+                        height: 53px;
+                        display: flex;
+                        color: #FF6060;
+                        flex-direction: column;
+    
+                        &__content {
+                            width: 100%;
+                            height: 70%;
+                            display: flex;
+                            font-size: 5vh;
+                            padding: 0px 0px 14px 0px;
+
+                        }
+    
+                        &__location {
+                            width: 100%;
+                            height: 30%;
+                            display: flex;
+                            font-size: 3vh;
+                            padding:  20px 0px 14px 0px;
+
+
+    
+                        }
+                    }
+    
+                    &__tags {
+                        width: 42vh;
+                        height: 10vh;
+                        display: flex;
+                        flex-direction: row;
+                        padding:  50px 0px 14px 0px;
+                        font-size: 14px;
+    
+                        &__vectors {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            flex-direction: row;
+                            background-color: #FF6060;
+                            border-radius: 5px;
+                            margin-right: 15px;
+
+    
+                            &__items {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                flex-wrap: nowrap;
+                                flex-direction: row;
+                                justify-content: center;
+    
+                                &__item {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    flex-wrap: nowrap;
+                                    font-size: 12px;
+                                    // padding: 7px 20px 7px 20px;
+                                    margin: auto auto;
+                                    border-radius: 5px;
+                                    color: white;
+                                    background-color: #FF6060;
+                                }
+    
+                            }
+                        }
+                    }
+                }
+    
+                &__rowRigth {
+                    width: 25%;
+                    height: 5%;
+                    display: flex;
+                    flex-direction: row-reverse;
+    
+                    &__rate {
+                        width: 50%;
+                        height: auto;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: auto auto;
+                        align-items: baseline;
+    
+                        &__star {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+    
+                            &__image {
+                                width: 100%;
+                                height: auto;
+                                background-color: #FF6060;
+                                display: flex;
+                                text-align: left;
+    
+                            }
+                        }
+                    }
+    
+                    &__host {
+                        width: 50%;
+                        height: 10vh;
+                        display: flex;
+                        justify-content: center;
+    
+                        &__identity {
+                            width: 60vh;
+                            height: 9vh;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+                            margin: auto 0px;
+    
+                            &__name {
+                                width: 50%;
+                                height: auto;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-end;
+    
+                                div {
+                                    width: 80%;
+                                 height: auto;
+                                 display: flex;
+                                 color: #FF6060;
+                                 text-align: right;
+                                 margin: 0px;
+                             }
+                            }
+    
+                            &__circle {
+                                width: 30%;
+                                height: 7vh;
+                                display: flex;
+                                justify-content: center;
+                                margin: auto 0px;
+    
+                            }
+                        }
+                    }
+    
+                }
+    
+    
+            }
+    
+            &__collapse {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+    
+                &__describe {
+                    width: 45%;
+                    height: auto;
+                    display: flex;
+                }
+    
+                &__equipement {
+                    width: 48%;
+                    height: auto;
+                    display: flex;
+                }
+            }
         }
     }
-
     @include xl {
         .appartement__card {
             width: 100%;
@@ -388,4 +691,5 @@
             height:auto;
         }
     }
+}
 }

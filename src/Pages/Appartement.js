@@ -14,6 +14,7 @@ function getIndex(id) {
 }
  
 const Appartement = () => {
+    
     const params = useParams()
     const id = params.id        // réference de l'image
     const myId = getIndex(id);  // l'identifiant de l'imame
@@ -28,6 +29,7 @@ const Appartement = () => {
     console.log(totalPictures);
     const [countPict, setCountPict] = useState(0);
     console.log(countPict);
+  
 
  // affichage  séquentielle des images ascendante ou descendante 
   const handleClickRigth = (e) => {
@@ -47,7 +49,6 @@ const Appartement = () => {
     else{ 
         setCountPict(countPict => countPict - 1)
     }
-    const equip = dataItem.equipments
 
   }
 return (
@@ -121,17 +122,23 @@ return (
                             </div>
                         </div>
                         <div className="appartement__describe__collapse">
-                            <div>
+                            <div className="appartement__describe__collapse__describe">
                                 <Accordeon 
                                 title = "Description"
                                 content = {dataItem.description}
                                 />
                             </div>
                          
-                            <div>
+                            <div className="appartement__describe__collapse__equipement">
                                 <Accordeon 
                                 title = "Equipements"
-                                content = {dataItem.equipments}
+                                content = {<ul className="accordeon__div__content__ul">
+                                            {dataItem.equipments.map((equipement, index) => (
+                                              <li key = {index} >{equipement}</li>  
+                                            ))}
+                                          </ul>}
+
+                                
                                 />
                             </div>
                         </div>
@@ -139,6 +146,6 @@ return (
             </div>
     </div>
          )
-)}
-
+);
+                                }
 export default Appartement;

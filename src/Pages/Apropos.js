@@ -23,25 +23,25 @@ const Apropos = () => {
         <div className='propos__accordeon'>
           <Accordeon 
           title="Fiabilité" 
-          content="contenu 1" 
+          content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." 
           />
         </div>
         <div className='propos__accordeon'>
           <Accordeon 
           title="Respect" 
-          content="contenu 2" 
+          content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." 
           />
         </div>
         <div className='propos__accordeon' >
           <Accordeon 
           title="Service" 
-          content="contenu 3" 
+          content="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question" 
           />
         </div>
         <div className='propos__accordeon'>
           <Accordeon 
           title="Sécurité" 
-          content="contenu 4" 
+          content="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes." 
           />  
         </div>
     </div>

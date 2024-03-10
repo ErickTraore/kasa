@@ -79,15 +79,15 @@ return (
                             <div className="appartement__describe__text__rowLeft">
                                 <div className="appartement__describe__text__rowLeft__title">
                                     <div className="appartement__describe__text__rowLeft__title__content">
-                                    <p>{dataItem.title}</p>
+                                        <p>{dataItem.title}</p>
                                     </div>
                                     <div className="appartement__describe__text__rowLeft__title__location">
-                                    <p>{dataItem.location}</p>
+                                        <p>{dataItem.location}</p>
                                     </div>
                                 </div>
                                 <div className="appartement__describe__text__rowLeft__tags">
                                 {dataItem.tags.map((doc) => (
-                                        <div className="appartement__describe__text__rowLeft__tags__vectors">
+                                        <div key= {doc} className="appartement__describe__text__rowLeft__tags__vectors">
                                             <div className="appartement__describe__text__rowLeft__tags__vectors__items">
                                                 <div className="appartement__describe__text__rowLeft__tags__vectors__items__item">
                                                     {doc}
@@ -111,13 +111,7 @@ return (
                                     </div>
                                 </div>
                                 <div className="appartement__describe__text__rowRigth__rate">
-                                <div>
-             <div>
-                <Rating rating = {dataItem.rating} />
-            </div>
-
-        </div>
-                                
+                                    <Rating rating = {dataItem.rating} />
                                 </div>
                             </div>
                         </div>
@@ -142,7 +136,7 @@ return (
                                 />
                             </div>
                         </div>
-                </div>
+                    </div>
             </div>
     </div>
          )

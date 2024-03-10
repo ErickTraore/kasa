@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import arrowUp from '../assets/icons/au.png';
+import arrowUp from '../assets/icons/upar.png';
 
 const Accordeon = (props) => {
 const[active, setActive] = useState(false)
@@ -12,13 +12,13 @@ const handleToggle = (e) =>{
 }
    return (
         <div className="accordeon">
-            <div className="accordeon__div" >
-                <div className="accordeon__div__banner" >
-                    <div className="accordeon__div__banner__title"  >
+            <div className="accordeon__display" >
+                <div className="accordeon__display__banner" >
+                    <div className="accordeon__display__banner__title"  >
                         {props.title} 
                     </div>
-                    <div className="accordeon__div__banner__icon" > 
-                        <img className="accordeon__div__banner__icon__image" src={arrowUp} alt="" onClick= {handleToggle} />
+                    <div className="accordeon__display__banner__icon" > 
+                        <img className="accordeon__display__banner__icon__image" src={arrowUp} alt="" onClick= {handleToggle} />
                     </div> 
                 </div>
             </div>

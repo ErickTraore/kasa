@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   font-family: 'Montserrat';
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 
   &__section {
     width: 90%;
@@ -27,8 +27,8 @@
       line-height: 100%;
       font-family: 'Montserrat';
       position: absolute;
-      left: 7vh;
-      top: 17vh;
+      left: 6vh;
+      top: 10vh;
       font-weight: 600;
 
       &__content {
@@ -40,7 +40,7 @@
 
     &__masqgroup {
       width: 100%;
-      height: 17vh;
+      height: 12vh;
       display: flex;
       justify-content: center;
       border-radius: 10px;
@@ -51,7 +51,7 @@
 
       img {
         width: 100%;
-        height: 17vh;
+        height: 12vh;
         opacity: 0.6;
         object-fit: cover;
         object-position: right;
@@ -62,6 +62,10 @@
 
   @include sm1 {
     &__section {
+    &__texte {
+      left: 6vh;
+      top: 11vh;
+    }
 
       &__masqgroup {
         width: 100%;
@@ -77,7 +81,7 @@
     &__section {
 
       &__texte {
-        top: 18vh;
+        top: 11vh;
       }
 
       &__masqgroup {
@@ -93,9 +97,9 @@
   @include md {
     &__section {
       &__texte {
-        width: 60%;
-        left: 32vh;
-        top: 30vh;
+        width: 100%;
+        left: auto;
+        top: 16vh;
         &__content {
           text-align: center;
           font-size: 36px;
@@ -114,8 +118,8 @@
     &__section {
       &__texte {
         width: 100%;
-        left: 7vh;
-        top: 33vh;
+        left: auto;
+        top: 15vh;
         &__content {
           font-size: 50px;
         }
@@ -133,8 +137,8 @@
     &__section {
       &__texte {
         width: 100%;
-        left: 7vh;
-        top: 34vh;
+        left: auto;
+        top: 15vh;
         &__content {
           font-size: 50px;
         }
@@ -151,8 +155,8 @@
     &__section {
       &__texte {
         width: 60%;
-        left: 32vh;
-        top: 34vh;
+        left: auto;
+        top: 15vh;
         &__content {
           text-align: center;
           font-size: 86px;

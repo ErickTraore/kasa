@@ -8,4 +8,9 @@
 @import "./pages/Appartement.scss";
 @import "/src/sass/utils/Variables";
 @import "./pages/NavBar";
-@import "./pages/NoPage"
+@import "./pages/NoPage";
+@import "./pages/Rating";
+
+*{
+    font-family: Montserrat,sans-serif;
+}

@@ -1,0 +1,19 @@
+@import "/src/sass/utils/Variables";
+@import "/src/sass/utils/Mixins";
+
+li
+{
+
+  list-style-type: none;
+
+}
+.rating {
+    width: auto;
+    height: auto;
+    display: flex;
+    &__item {
+        width: auto;
+        height: auto;
+        margin-right: 5px;
+    }
+}

@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../src/Pages/Layout";
-import Setcard from "../src/Pages/Setcard";
-import NoPage from "../src/Pages/NoPage";
-import Apropos from "../src/Pages/Apropos";
+import Layout from "./Pages/Layout";
+import Setcard from "./Pages/Setcard";
+import NoPage from "./Pages/NoPage";
+import Apropos from "./Pages/Apropos";
 import Appartement from "./Pages/Appartement";
+
 export default function App() {
   return (
     <BrowserRouter>
